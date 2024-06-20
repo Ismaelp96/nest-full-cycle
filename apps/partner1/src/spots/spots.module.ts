@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { SpotsService } from './spots.service';
+
 import { SpotsCoreModule } from '@app/core/spots/spots-core.module';
+import { SpotsController } from './spots.controller';
 
 @Module({
   imports: [SpotsCoreModule],
-  providers: [SpotsService],
+  controllers: [SpotsController],
 })
 export class SpotsModule {}
